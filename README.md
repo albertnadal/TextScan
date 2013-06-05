@@ -1,0 +1,1 @@
+# TextScanner README

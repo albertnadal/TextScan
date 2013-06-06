@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *cameraImageView;
 @property (nonatomic, strong) IBOutlet UIButton *recognizeButton;
 @property (nonatomic, strong) IBOutlet UIView *loadingView;
+@property (nonatomic, weak) IBOutlet UIView *roundedLoadingView;
 @property (nonatomic, strong) IBOutlet UIButton *textToClipboardButton;
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) Tesseract *tesseract;
@@ -33,6 +34,9 @@
     [super viewDidLoad];
 
     _cameraImageView.clipsToBounds = YES;
+
+    _roundedLoadingView.layer.cornerRadius = 6.0f;
+    _roundedLoadingView.layer.masksToBounds = YES;
 
     [self.view bringSubviewToFront:_loadingView];
     [_loadingView setHidden:YES];
@@ -65,9 +69,6 @@
 
     _tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
     [_tesseract setVariableValue:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.:-()?¿!¡'*&%$@=<>{}-#\"" forKey:@"tessedit_char_whitelist"];
-/*    [_tesseract setImage:[UIImage imageNamed:@"image_sample.png"]];
-    [_tesseract recognize];
-    [_textView setText:[_tesseract recognizedText]];*/
 
     [self setupCaptureSession];
 }
@@ -101,14 +102,15 @@
 
     output.videoSettings = [NSDictionary dictionaryWithObject:  [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey];
     output.alwaysDiscardsLateVideoFrames = YES;
-    //output.minFrameDuration = CMTimeMake(1, 30);
     [_session startRunning];
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
     dispatch_sync(_tesseractAccessQueue, ^{
-        [_tesseract setImage:[self scaleAndRotateImage:[self imageFromSampleBuffer:sampleBuffer] withMaxWidth:1280 withImageOrientation:UIImageOrientationRight]];
+        @autoreleasepool {
+            [_tesseract setImage:[self scaleAndRotateImage:[self imageFromSampleBuffer:sampleBuffer] withMaxWidth:720 withImageOrientation:UIImageOrientationRight]];
+        }
     });
 }
 
@@ -150,6 +152,7 @@
     CVPixelBufferLockBaseAddress(imageBuffer, 0);
 
     void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+
     size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
     size_t width = CVPixelBufferGetWidth(imageBuffer);
     size_t height = CVPixelBufferGetHeight(imageBuffer);
@@ -159,11 +162,16 @@
 
     CGImageRef quartzImage = CGBitmapContextCreateImage(context);
     CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+
     CGContextRelease(context);
     CGColorSpaceRelease(colorSpace);
 
-    UIImage *image = [UIImage imageWithCGImage:quartzImage];
+    // Is necessary to crop the image because we only want to translate the viewport area text
+    CGRect clippedRect  = CGRectMake(0, 0, 590, 720);
+    CGImageRef cropedImage = CGImageCreateWithImageInRect(quartzImage, clippedRect);
+    UIImage *image = [UIImage imageWithCGImage:cropedImage];
 
+    CGImageRelease(cropedImage);
     CGImageRelease(quartzImage);
     return (image);    
 }
@@ -255,9 +263,9 @@
              }
              
              UIGraphicsBeginImageContext(bounds.size);
-             
+
              CGContextRef context = UIGraphicsGetCurrentContext();
-             
+
              if (orient == UIImageOrientationRight || orient == UIImageOrientationLeft) {
                  CGContextScaleCTM(context, -scaleRatio, scaleRatio);
                  CGContextTranslateCTM(context, -height, 0);
@@ -266,14 +274,15 @@
                  CGContextScaleCTM(context, scaleRatio, -scaleRatio);
                  CGContextTranslateCTM(context, 0, -height);
              }
-             
+
              CGContextConcatCTM(context, transform);
-             
+
              CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, width, height), imgRef);
              UIImage *imageCopy = UIGraphicsGetImageFromCurrentImageContext();
+
              UIGraphicsEndImageContext();
-    
-             return imageCopy;
+
+    return imageCopy;
 }
              
 @end

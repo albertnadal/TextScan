@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C67E8A3175F29E8003E86CB"
-            BuildableName = "tesseract.app"
-            BlueprintName = "tesseract"
-            ReferencedContainer = "container:tesseract.xcodeproj">
+            BuildableName = "TextScanner.app"
+            BlueprintName = "TextScanner"
+            ReferencedContainer = "container:TextScanner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C67E8A3175F29E8003E86CB"
-            BuildableName = "tesseract.app"
-            BlueprintName = "tesseract"
-            ReferencedContainer = "container:tesseract.xcodeproj">
+            BuildableName = "TextScanner.app"
+            BlueprintName = "TextScanner"
+            ReferencedContainer = "container:TextScanner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C67E8A3175F29E8003E86CB"
             BuildableName = "TextScanner.app"
-            BlueprintName = "TextScanner"
-            ReferencedContainer = "container:TextScanner.xcodeproj">
+            BlueprintName = "TextScan"
+            ReferencedContainer = "container:TextScan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C67E8A3175F29E8003E86CB"
             BuildableName = "TextScanner.app"
-            BlueprintName = "TextScanner"
-            ReferencedContainer = "container:TextScanner.xcodeproj">
+            BlueprintName = "TextScan"
+            ReferencedContainer = "container:TextScan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

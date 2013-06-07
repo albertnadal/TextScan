@@ -194,14 +194,14 @@
 		3C505FF8175F9635004B5928 /* img_clipboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_clipboard@2x.png"; sourceTree = "<group>"; };
 		3C505FFF175F9B56004B5928 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		3C506001175F9B99004B5928 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
-		3C67E8A4175F29E8003E86CB /* TextScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C67E8A4175F29E8003E86CB /* TextScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C67E8A7175F29E8003E86CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C67E8A9175F29E8003E86CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C67E8AB175F29E8003E86CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3C67E8AF175F29E8003E86CB /* TextScanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextScanner-Info.plist"; sourceTree = "<group>"; };
+		3C67E8AF175F29E8003E86CB /* TextScan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextScan-Info.plist"; sourceTree = "<group>"; };
 		3C67E8B1175F29E8003E86CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C67E8B3175F29E8003E86CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3C67E8B5175F29E8003E86CB /* TextScanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextScanner-Prefix.pch"; sourceTree = "<group>"; };
+		3C67E8B5175F29E8003E86CB /* TextScan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextScan-Prefix.pch"; sourceTree = "<group>"; };
 		3C67E8B6175F29E8003E86CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C67E8B7175F29E8003E86CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3C67E8B9175F29E9003E86CB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -444,7 +444,7 @@
 		3C67E8A5175F29E8003E86CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C67E8A4175F29E8003E86CB /* TextScanner.app */,
+				3C67E8A4175F29E8003E86CB /* TextScan.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,10 +486,10 @@
 				3C505FF7175F9635004B5928 /* img_clipboard.png */,
 				3C505FF8175F9635004B5928 /* img_clipboard@2x.png */,
 				3C67E97C175F360A003E86CB /* image_sample.png */,
-				3C67E8AF175F29E8003E86CB /* TextScanner-Info.plist */,
+				3C67E8AF175F29E8003E86CB /* TextScan-Info.plist */,
 				3C67E8B0175F29E8003E86CB /* InfoPlist.strings */,
 				3C67E8B3175F29E8003E86CB /* main.m */,
-				3C67E8B5175F29E8003E86CB /* TextScanner-Prefix.pch */,
+				3C67E8B5175F29E8003E86CB /* TextScan-Prefix.pch */,
 				3C506001175F9B99004B5928 /* icon.png */,
 				3C505FFF175F9B56004B5928 /* icon@2x.png */,
 				3C67E8B9175F29E9003E86CB /* Default.png */,
@@ -518,9 +518,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C67E8A3175F29E8003E86CB /* TextScanner */ = {
+		3C67E8A3175F29E8003E86CB /* TextScan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C67E8C7175F29E9003E86CB /* Build configuration list for PBXNativeTarget "TextScanner" */;
+			buildConfigurationList = 3C67E8C7175F29E9003E86CB /* Build configuration list for PBXNativeTarget "TextScan" */;
 			buildPhases = (
 				3C67E8A0175F29E8003E86CB /* Sources */,
 				3C67E8A1175F29E8003E86CB /* Frameworks */,
@@ -530,9 +530,9 @@
 			);
 			dependencies = (
 			);
-			name = TextScanner;
+			name = TextScan;
 			productName = tesseract;
-			productReference = 3C67E8A4175F29E8003E86CB /* TextScanner.app */;
+			productReference = 3C67E8A4175F29E8003E86CB /* TextScan.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -544,7 +544,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Albert Nadal Garriga";
 			};
-			buildConfigurationList = 3C67E89F175F29E8003E86CB /* Build configuration list for PBXProject "TextScanner" */;
+			buildConfigurationList = 3C67E89F175F29E8003E86CB /* Build configuration list for PBXProject "TextScan" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -556,7 +556,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C67E8A3175F29E8003E86CB /* TextScanner */,
+				3C67E8A3175F29E8003E86CB /* TextScan */,
 			);
 		};
 /* End PBXProject section */
@@ -638,7 +638,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Albert Nadal Garriga (2PGPYWC393)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Albert Nadal Garriga (2PGPYWC393)";
 				COPY_PHASE_STRIP = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* (*) .DS_Store CVS .svn .git .hg .lm";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -658,6 +659,8 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "17A3B489-60DB-46E1-848A-92111AEEE56D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17A3B489-60DB-46E1-848A-92111AEEE56D";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -674,6 +677,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Albert Nadal Garriga (2PGPYWC393)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -683,6 +687,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "17A3B489-60DB-46E1-848A-92111AEEE56D";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -691,21 +696,23 @@
 		3C67E8C8175F29E9003E86CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Albert Nadal Garriga (2PGPYWC393)";
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj *.lm";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tesseract/TextScanner-Prefix.pch";
+				GCC_PREFIX_HEADER = "tesseract/TextScan-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(CONTENTS_FOLDER_PATH)/tesseract-ios-lib/include/tesseract",
 					"$(CONTENTS_FOLDER_PATH)/tesseract-ios-lib/include/leptonica",
 				);
-				INFOPLIST_FILE = "tesseract/TextScanner-Info.plist";
+				INFOPLIST_FILE = "tesseract/TextScan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/tesseract/tesseract-ios-lib/lib\"",
 				);
-				PRODUCT_NAME = TextScanner;
+				PRODUCT_NAME = TextScan;
+				PROVISIONING_PROFILE = "17A3B489-60DB-46E1-848A-92111AEEE56D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -713,20 +720,22 @@
 		3C67E8C9175F29E9003E86CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Albert Nadal Garriga (2PGPYWC393)";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tesseract/TextScanner-Prefix.pch";
+				GCC_PREFIX_HEADER = "tesseract/TextScan-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(CONTENTS_FOLDER_PATH)/tesseract-ios-lib/include/tesseract",
 					"$(CONTENTS_FOLDER_PATH)/tesseract-ios-lib/include/leptonica",
 				);
-				INFOPLIST_FILE = "tesseract/TextScanner-Info.plist";
+				INFOPLIST_FILE = "tesseract/TextScan-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/tesseract/tesseract-ios-lib/lib\"",
 				);
-				PRODUCT_NAME = TextScanner;
+				PRODUCT_NAME = TextScan;
+				PROVISIONING_PROFILE = "17A3B489-60DB-46E1-848A-92111AEEE56D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -734,7 +743,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C67E89F175F29E8003E86CB /* Build configuration list for PBXProject "TextScanner" */ = {
+		3C67E89F175F29E8003E86CB /* Build configuration list for PBXProject "TextScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C67E8C5175F29E9003E86CB /* Debug */,
@@ -743,7 +752,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C67E8C7175F29E9003E86CB /* Build configuration list for PBXNativeTarget "TextScanner" */ = {
+		3C67E8C7175F29E9003E86CB /* Build configuration list for PBXNativeTarget "TextScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C67E8C8175F29E9003E86CB /* Debug */,
